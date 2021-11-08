@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import {BrowserModule} from "@angular/platform-browser";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 
 
 
@@ -15,7 +17,9 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
   imports: [
     CommonModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule
   ],
   bootstrap: [AppComponent]
 })
