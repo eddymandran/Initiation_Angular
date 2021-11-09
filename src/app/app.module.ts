@@ -7,6 +7,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import { HomeComponent } from './components/home/home.component';
+import { ListComponent } from './components/list/list.component';
 
 
 
@@ -14,7 +15,8 @@ import { HomeComponent } from './components/home/home.component';
   declarations: [
     AppComponent,
     AboutUsComponent,
-    HomeComponent
+    HomeComponent,
+    ListComponent
   ],
   imports: [
     CommonModule,
