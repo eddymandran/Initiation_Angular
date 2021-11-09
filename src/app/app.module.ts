@@ -8,8 +8,12 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import { HomeComponent } from './components/home/home.component';
 import { ListComponent } from './components/list/list.component';
+import {RouterModule, Routes} from "@angular/router";
 
-
+const routes:Routes=[
+  {path:"", component: HomeComponent},
+  {path:"about-us", component: AboutUsComponent},
+]
 
 @NgModule({
   declarations: [
@@ -23,8 +27,10 @@ import { ListComponent } from './components/list/list.component';
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot(routes)
   ],
+  exports:[RouterModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
