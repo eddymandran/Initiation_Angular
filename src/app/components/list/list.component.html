@@ -2,7 +2,8 @@
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{datum.name}}</mat-card-title>
-    <mat-card-subtitle>{{datum.price}}</mat-card-subtitle>
+    <mat-card-subtitle *ngIf="datum.price ; else person">  {{datum.price}}</mat-card-subtitle>
+    <ng-template #person><mat-card-subtitle>{{datum.age}}</mat-card-subtitle></ng-template>
   </mat-card-header>
   <img mat-card-image src='{{datum.picture? datum.picture : personPicture}}' alt="Photo of a Shiba Inu">
   <mat-card-content>
