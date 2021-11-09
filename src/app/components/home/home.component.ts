@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PRODUCTS} from "./mock-data";
 import {Product} from "../../model/Products";
+import {Card} from "../../model/Card";
 
 
 @Component({
@@ -8,6 +9,13 @@ import {Product} from "../../model/Products";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 products: Product[] = PRODUCTS;
-}
+data: Card[]=[];
+
+
+  ngOnInit() {
+    this.data = this.products.map((product) =>{
+      return {title: product.name, subTitle: product.price + ' ans', image: product.picture}
+    })
+}}
