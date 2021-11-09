@@ -4,7 +4,7 @@
     <mat-card-title>{{datum.name}}</mat-card-title>
     <mat-card-subtitle>{{datum.price}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src='{{datum.picture}}' alt="Photo of a Shiba Inu">
+  <img mat-card-image src='{{datum.picture? datum.picture : personPicture}}' alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p>
       The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
