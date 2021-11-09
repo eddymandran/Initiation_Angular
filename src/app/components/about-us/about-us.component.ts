@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Person} from "../../model/Person";
+import {Card} from "../../model/Card";
 
 
 @Component({
@@ -8,12 +9,20 @@ import {Person} from "../../model/Person";
   styleUrls: ['./about-us.component.css'],
   // styles: ['mat-card {background:red}']
 })
-export class AboutUsComponent {
+export class AboutUsComponent implements OnInit{
   persons : Person[] = [
-    {name:"eddy", age:32},
-    {name:"liam", age:3},
-    {name:"thea", age:1}
-
+    {name:"Eddy", age:32},
+    {name:"Liam", age:3},
+    {name:"Théa", age:1}
   ]
+  personPicture: string = 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+
+  data:Card[]= []
+
+  ngOnInit() {
+    this.data = this.persons.map((person) =>{
+      return {title: person.name, subTitle: person.age + ' ans', image: this.personPicture}
+    })
+  }
 
 }
