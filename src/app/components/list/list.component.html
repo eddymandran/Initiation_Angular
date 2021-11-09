@@ -1,11 +1,10 @@
-<mat-card class="example-card" *ngFor="let datum of data" [ngStyle]="{float: 'left'}">
+<mat-card class="example-card" *ngFor="let datum of displayData" [ngStyle]="{float: 'left'}">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{datum.name}}</mat-card-title>
-    <mat-card-subtitle *ngIf="datum.price ; else person">  {{datum.price}}</mat-card-subtitle>
-    <ng-template #person><mat-card-subtitle>{{datum.age}}</mat-card-subtitle></ng-template>
+    <mat-card-title>{{datum.title}}</mat-card-title>
+    <mat-card-subtitle>  {{datum.subTitle}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src='{{datum.picture? datum.picture : personPicture}}' alt="Photo of a Shiba Inu">
+  <img mat-card-image src='{{datum.image}}' alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p>
       The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
