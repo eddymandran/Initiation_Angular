@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import {Person} from "../../model/Person";
 
-interface Person {name:string, age:number}
 
 @Component({
   selector: 'app-about-us',

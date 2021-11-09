@@ -1,14 +1,8 @@
 import {Component} from '@angular/core';
 import {PRODUCTS} from "./mock-data";
+import {Product} from "../../model/Products";
 
-interface Product
-  {
-    id: number,
-    name: string,
-    price: number,
-    stock: number,
-    picture: string
-  }
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
