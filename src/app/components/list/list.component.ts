@@ -7,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ListComponent implements OnInit {
   @Input() data:any;
+  personPicture: string = 'https://material.angular.io/assets/img/examples/shiba2.jpg'
 
   constructor() { }
 
