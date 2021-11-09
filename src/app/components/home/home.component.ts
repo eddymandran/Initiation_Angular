@@ -16,6 +16,6 @@ data: Card[]=[];
 
   ngOnInit() {
     this.data = this.products.map((product) =>{
-      return {title: product.name, subTitle: product.price + ' ans', image: product.picture}
+      return {title: product.name, subTitle: product.price + ' €', image: product.picture}
     })
 }}
