@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Card} from '../../model/Card';
 
 
@@ -10,11 +10,14 @@ import {Card} from '../../model/Card';
 export class ListComponent{
 
   @Input() data: Card[];
+  @Output() likeClick:EventEmitter<any>= new EventEmitter<any>()
 
   constructor(){
     this.data = [];
   }
-
+  onLikeClick(){
+   this.likeClick.emit();
+  }
 
 
 }
