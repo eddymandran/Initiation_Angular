@@ -15,8 +15,8 @@ export class ListComponent{
   constructor(){
     this.data = [];
   }
-  onLikeClick(){
-   this.likeClick.emit();
+  onLikeClick(id: number){
+   this.likeClick.emit(id);
   }
 
 

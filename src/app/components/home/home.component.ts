@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit{
   ngOnInit(){
     this.productService.getProducts().subscribe(products => {
       this.data = products.map((product) => {
-        return {title: product.name, subTitle: product.price + ' €', image: product.picture}
+        return {id:product.id, title: product.name, subTitle: product.price + ' €', image: product.picture}
       })
     });
 
