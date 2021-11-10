@@ -10,10 +10,13 @@ import { HomeComponent } from './components/home/home.component';
 import { ListComponent } from './components/list/list.component';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule} from "@angular/common/http";
+import { ContactComponent } from './components/contact/contact.component';
+import {FormsModule} from "@angular/forms";
 
 const routes:Routes = [
   {path: '', component: HomeComponent},
   {path: 'about-us', component: AboutUsComponent},
+  {path: 'contact-us', component: ContactComponent},
 ]
 
 
@@ -22,7 +25,8 @@ const routes:Routes = [
     AppComponent,
     AboutUsComponent,
     HomeComponent,
-    ListComponent
+    ListComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +35,8 @@ const routes:Routes = [
     MatCardModule,
     MatButtonModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent]
