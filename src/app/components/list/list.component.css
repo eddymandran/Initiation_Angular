@@ -9,5 +9,12 @@
 
 mat-card{
   margin: 25px;
-  height: 450px;
+  max-height: 450px;
+}
+
+.mat-card-image{
+  text-align:center;
+  margin:auto;
+  display:flex;
+  padding: 10px;
 }
