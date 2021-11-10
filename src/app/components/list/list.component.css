@@ -7,7 +7,7 @@
   background-size: cover;
 }
 
-mat-card{
+.mat-card{
   margin: 25px;
   max-height: 450px;
 }
@@ -17,4 +17,10 @@ mat-card{
   margin:auto;
   display:flex;
   padding: 10px;
+  max-height: 300px;
+  max-width: 200px;
+}
+.mat-card-actions{
+  display: flex;
+  justify-content: space-around;
 }
