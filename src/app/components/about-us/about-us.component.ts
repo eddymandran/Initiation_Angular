@@ -1,28 +1,25 @@
-import {Component, OnInit} from '@angular/core';
-import {Person} from "../../model/Person";
-import {Card} from "../../model/Card";
+import { Component, OnInit } from '@angular/core';
+import {Person} from '../../model/Person';
+import {Card} from '../../model/Card'; 
 
 
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.css'],
-  // styles: ['mat-card {background:red}']
+  styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent implements OnInit{
-  persons : Person[] = [
-    {name:"Eddy", age:32},
-    {name:"Liam", age:3},
-    {name:"Théa", age:1}
+  persons: Person[] = [
+    {name: "Karim Benzema", age: 33, description: "Bonjour voici la description de Karim Benzema", photo:"karim.jpg"},
+    {name: "Olvier Giroud", age: 35, description: "Bonjour voici la description de Olvier Giroud", photo:"giroud.jpg"},
+    {name: "Alex Morgan", age: 32, description: "Bonjour voici la description de Alex Morgan", photo:"morgan.jpg"},
   ]
-  personPicture: string = 'https://material.angular.io/assets/img/examples/shiba2.jpg'
 
-  data:Card[]= []
+  data:Card[] = [];
 
-  ngOnInit() {
-    this.data = this.persons.map((person) =>{
-      return {title: person.name, subTitle: person.age + ' ans', image: this.personPicture}
+  ngOnInit(){
+    this.data = this.persons.map((person) => {
+      return {title: person.name, subTitle: person.age + 'ans', image: "../../../assets/image/" + person.photo}
     })
   }
-
 }
