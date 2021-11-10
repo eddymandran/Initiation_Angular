@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from '../../model/Product';
-import {Card} from '../../model/Card'; 
+import {Card} from '../../model/Card';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -29,4 +29,7 @@ export class HomeComponent implements OnInit{
 
   }
 
+  onLikeClick(){
+    console.log("Like clicked")
+  }
 }
