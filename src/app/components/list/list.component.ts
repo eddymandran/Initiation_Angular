@@ -10,7 +10,6 @@ import {Card} from '../../model/Card';
 export class ListComponent{
 
   @Input() data: Card[];
-  displayData: Card[] = [];
 
   constructor(){
     this.data = [];
