@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit{
 
   }
 
-  onLikeClick(){
-    console.log("Like clicked")
+  onLikeClick(id:number){
+    console.log(id)
   }
 }

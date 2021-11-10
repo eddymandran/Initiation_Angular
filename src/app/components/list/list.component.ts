@@ -10,7 +10,7 @@ import {Card} from '../../model/Card';
 export class ListComponent{
 
   @Input() data: Card[];
-  @Output() likeClick:EventEmitter<any>= new EventEmitter<any>()
+  @Output() likeClick:EventEmitter<number>= new EventEmitter<number>()
 
   constructor(){
     this.data = [];
