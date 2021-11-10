@@ -1,19 +1,21 @@
-import {Component, Input} from '@angular/core';
-import { Card} from "../../model/Card";
+import { Component, Input } from '@angular/core';
+import {Card} from '../../model/Card';
+
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent {
+export class ListComponent{
+
   @Input() data: Card[];
+  displayData: Card[] = [];
 
-
-
-  constructor() {
-    this.data=[];
+  constructor(){
+    this.data = [];
   }
+
 
 
 }

@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Card} from "../../model/Card";
-import {ProductService} from "../../services/product.service";
-
+import { Component, OnInit } from '@angular/core';
+import {Product} from '../../model/Product';
+import {Card} from '../../model/Card'; 
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-home',
@@ -9,16 +9,24 @@ import {ProductService} from "../../services/product.service";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-data: Card[]=[];
 
-constructor(private productService: ProductService) {
+  products:Product[] = [];
+
+  data:Card[] = [];
+
+  constructor(private productService:ProductService){
+
+
+
+  }
+
+  ngOnInit(){
+    this.productService.getProducts().subscribe(products => {
+      this.data = products.map((product) => {
+        return {title: product.name, subTitle: product.price + ' €', image: product.picture}
+      })
+    });
+
+  }
+
 }
-
-  ngOnInit() {
-  this.productService.getProducts().subscribe(products =>{
-    this.data = products.map((product) =>{
-      return {title: product.name, subTitle: product.price + ' €', image: product.picture}
-    })
-  });
-
-}}
