@@ -1,19 +1,21 @@
 <mat-card [ngStyle]="{float: 'left'}" class="example-card" *ngFor="let datum of data">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{datum.title}}</mat-card-title>
-      <mat-card-subtitle >{{datum.subTitle}}</mat-card-subtitle>
-    </mat-card-header>
-    <img [ngStyle]="{width: '300px'}" mat-card-image src="{{datum.image}}" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        le stock est de aie
-      </p>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{datum.title}}</mat-card-title>
+    <mat-card-subtitle>{{datum.subTitle}}</mat-card-subtitle>
+  </mat-card-header>
+  <img [ngStyle]="{width: '300px'}" mat-card-image src="{{datum.image}}" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      Lorem ipsum dolor sit amet. Sit adipisci ipsam ea assumenda quibusdam 33 adipisci quam id pariatur perferendis.
+      Quo vero ipsum ad quasi recusandae sed molestiae placeat est repudiandae odio aut dolores expedita vel excepturi
+      officiis.
+    </p>
 
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
 </mat-card>
 
