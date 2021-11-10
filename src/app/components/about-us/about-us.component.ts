@@ -12,20 +12,20 @@ export class AboutUsComponent implements OnInit {
   persons: Person[] = [
     {
       name: "Eddy",
-      age: 33,
-      description: "Vel ducimus voluptatibus qui harum harum vel blanditiis dolorum non explicabo nihil ut corporis repudiandae. Qui quae dolorum hic odit exercitationem est explicabo molestias ut placeat possimus et voluptas aliquam est impedit molestias.",
+      age: 32,
+      description: "Vel ducimus voluptatibus qui harum harum vel blanditiis dolorum non explicabo nihil ut corporis repudiandae.",
       photo: "eddy.png"
     },
     {
       name: "Théa",
-      age: 35,
-      description: "Vel ducimus voluptatibus qui harum harum vel blanditiis dolorum non explicabo nihil ut corporis repudiandae. Qui quae dolorum hic odit exercitationem est explicabo molestias ut placeat possimus et voluptas aliquam est impedit molestias.",
+      age: 1,
+      description: "Vel ducimus voluptatibus qui harum harum vel blanditiis dolorum non explicabo nihil ut corporis repudiandae.",
       photo: "thea.png"
     },
     {
       name: "Liam",
-      age: 32,
-      description: "Vel ducimus voluptatibus qui harum harum vel blanditiis dolorum non explicabo nihil ut corporis repudiandae. Qui quae dolorum hic odit exercitationem est explicabo molestias ut placeat possimus et voluptas aliquam est impedit molestias.",
+      age: 3,
+      description: "Vel ducimus voluptatibus qui harum harum vel blanditiis dolorum non explicabo nihil ut corporis repudiandae. ",
       photo: "liam.png"
     },
   ]
@@ -34,7 +34,7 @@ export class AboutUsComponent implements OnInit {
 
   ngOnInit() {
     this.data = this.persons.map((person) => {
-      return {title: person.name, subTitle: person.age + 'ans', image: "../../../assets/image/" + person.photo}
+      return {title: person.name, subTitle: person.age + ' ans', image: "../../../assets/image/" + person.photo}
     })
   }
 }
