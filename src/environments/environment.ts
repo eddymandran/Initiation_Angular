@@ -7,7 +7,8 @@ export const environment = {
   API:{
     "baseUrl":"http://localhost:5000",
     endpoint:{
-      product: '/product'
+      product: '/product',
+      contact: '/contact'
     }
   }
 };

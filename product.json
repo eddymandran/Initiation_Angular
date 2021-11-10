@@ -1,6 +1,5 @@
-
 {
-  "product" : [
+  "product": [
     {
       "id": 1,
       "name": "Bike",
@@ -29,6 +28,21 @@
       "stock": 15,
       "picture": "https://upload.wikimedia.org/wikipedia/commons/1/17/World%27s_First_Computer%2C_the_Electronic_Numerical_Integrator_and_Calculator_%28ENIAC%29.gif"
     }
+  ],
+  "contact": [
+    {
+      "name": "eddy MANDRAN",
+      "email": "eddy.mandran@gmail.com",
+      "phone": "0658135769",
+      "message": "hkjjjhj",
+      "id": 1
+    },
+    {
+      "name": "eddy MANDRAN",
+      "email": "eddy.mandran@gmail.com",
+      "phone": "0658135769",
+      "message": "hkjjjhj",
+      "id": 2
+    }
   ]
 }
-  

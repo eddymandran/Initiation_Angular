@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Contact} from "../../model/Contact";
+import {ContactService} from "../../services/contact.service";
 
 @Component({
   selector: 'app-contact',
@@ -9,7 +10,9 @@ import {Contact} from "../../model/Contact";
 export class ContactComponent{
 contact: Contact = {name: '',email: '',phone: '',message: '', }
 
-  onSubmit(){
-  console.log(this.contact)
+  constructor( private contactService:ContactService) {
+  }
+  onSubmit() : void{
+  this.contactService.create(this.contact).subscribe(response => console.log(response));
   }
 }
