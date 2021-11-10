@@ -12,7 +12,7 @@ export class ContactService {
   constructor(private http: HttpClient) {
   }
 
-  create(contact: Contact):Observable<Object>{
-    return this.http.post(environment.API.baseUrl + environment.API.endpoint.contact, contact)
+  create(contact: Contact):Observable<Contact>{
+    return this.http.post<Contact>(environment.API.baseUrl + environment.API.endpoint.contact, contact)
   }
 }
