@@ -12,11 +12,14 @@ import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule} from "@angular/common/http";
 import { ContactComponent } from './components/contact/contact.component';
 import {FormsModule} from "@angular/forms";
+import { HeaderComponent } from './components/header/header.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 const routes:Routes = [
   {path: '', component: HomeComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact-us', component: ContactComponent},
+  {path: 'product/:id', component: ProductDetailComponent}
 ]
 
 
@@ -26,7 +29,9 @@ const routes:Routes = [
     AboutUsComponent,
     HomeComponent,
     ListComponent,
-    ContactComponent
+    ContactComponent,
+    HeaderComponent,
+    ProductDetailComponent
   ],
   imports: [
     CommonModule,

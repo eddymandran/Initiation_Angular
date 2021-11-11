@@ -24,3 +24,7 @@
   justify-content: space-around;
 }
 
+.mat-card-subtitle{
+  font-style: italic;
+  font-weight: bold;
+}

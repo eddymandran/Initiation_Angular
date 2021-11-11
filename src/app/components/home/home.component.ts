@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Product} from '../../model/Product';
 import {Card} from '../../model/Card';
 import { ProductService } from 'src/app/services/product.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit{
 
   data:Card[] = [];
 
-  constructor(private productService:ProductService){
+  constructor(private productService:ProductService, private router: Router){
 
 
 
@@ -30,6 +31,10 @@ export class HomeComponent implements OnInit{
   }
 
   onLikeClick(id:number){
+    console.log("button like clicked with the id N° " + id)
+  }
+  onCardClick(id:number){
     console.log(id)
+    this.router.navigateByUrl("product/" + id)
   }
 }
