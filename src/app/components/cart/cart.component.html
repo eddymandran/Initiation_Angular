@@ -7,13 +7,16 @@
     <td class="tableHead"><h3>Price</h3></td>
     <td class="tableHead"><h3>Quantity</h3></td>
     <td class="tableHead"><h3>Total</h3></td>
+    <td></td>
   </tr>
   </thead>
   <tr *ngFor="let item of cart">
-  <td> {{item.name}} € </td>
+  <td> {{item.name}} </td>
   <td> {{item.price}} €</td>
   <td> {{item.quantity}} </td>
   <td> {{item.quantity * item.price}} € </td>
+   <td><button name="trash" type="button" (click)="onDeleteItem(item)">Delete</button></td>
+
   </tr>
   <tr>
     <td colspan="4" class="total"><h3>Total order : {{totalOrder}} €</h3></td>
