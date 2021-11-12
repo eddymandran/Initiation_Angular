@@ -1,0 +1,22 @@
+
+<table class="shopping-cart">
+  <caption>Shopping Cart</caption>
+  <thead>
+  <tr>
+    <td>Name</td>
+    <td>Price</td>
+    <td>quantity</td>
+    <td>Total</td>
+  </tr>
+  </thead>
+  <tr *ngFor="let item of cart">
+  <td> {{item.name}} </td>
+  <td> {{item.price}} </td>
+  <td> {{item.quantity}} </td>
+  <td> {{item.quantity * item.price}} </td>
+  </tr>
+  <tfoot><tr>
+    <td colspan="3">Total :</td>
+    <td>{{totalOrder}}</td>
+  </tr></tfoot>
+</table>

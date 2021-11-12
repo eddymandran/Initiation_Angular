@@ -18,6 +18,9 @@ export class ProductDetailComponent implements OnInit {
       .subscribe((product: Product)=> {
         this.product= product;
       })
+
+
   }
+
 
 }

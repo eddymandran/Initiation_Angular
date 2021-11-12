@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {Product} from '../../model/Product';
+import {Component, OnInit} from '@angular/core';
 import {Card} from '../../model/Card';
-import { ProductService } from 'src/app/services/product.service';
+import {ProductService} from 'src/app/services/product.service';
 import {Router} from "@angular/router";
+import {ShoppingCart} from "../../model/ShoppingCart";
 
 @Component({
   selector: 'app-home',
@@ -11,15 +11,12 @@ import {Router} from "@angular/router";
 })
 export class HomeComponent implements OnInit{
 
-  products:Product[] = [];
-
-  data:Card[] = [];
+   data:Card[] = [];
+   cart:ShoppingCart[]=[];
 
   constructor(private productService:ProductService, private router: Router){
-
-
-
   }
+
 
   ngOnInit(){
     this.productService.getProducts().subscribe(products => {
@@ -28,7 +25,10 @@ export class HomeComponent implements OnInit{
       })
     });
 
+    const localCart = localStorage.getItem('cart')
+    this.cart = localCart!==null? JSON.parse(localCart):this.cart;
   }
+
 
   onLikeClick(id:number){
     console.log("button like clicked with the id N° " + id)
@@ -37,4 +37,19 @@ export class HomeComponent implements OnInit{
     console.log(id)
     this.router.navigateByUrl("product/" + id)
   }
+
+  inCreaseQuantityOrAdd(newArticle:ShoppingCart){
+    let art = this.cart.find(article => article.id === newArticle.id);
+    if(art !== undefined){
+      art.quantity++
+    }else{
+      this.cart.push(newArticle);
+    }
+  }
+  onAddClick(product:Card){
+    let price = parseInt(product.subTitle);
+    this.inCreaseQuantityOrAdd({id: product.id, name: product.title, price: price, quantity: 1})
+    localStorage.setItem('cart',JSON.stringify(this.cart));
+  }
+
 }

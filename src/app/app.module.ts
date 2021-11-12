@@ -14,12 +14,14 @@ import { ContactComponent } from './components/contact/contact.component';
 import {FormsModule} from "@angular/forms";
 import { HeaderComponent } from './components/header/header.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { CartComponent } from './components/cart/cart.component';
 
 const routes:Routes = [
   {path: '', component: HomeComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact-us', component: ContactComponent},
-  {path: 'product/:id', component: ProductDetailComponent}
+  {path: 'product/:id', component: ProductDetailComponent},
+  {path: 'cart', component: CartComponent}
 ]
 
 
@@ -31,7 +33,8 @@ const routes:Routes = [
     ListComponent,
     ContactComponent,
     HeaderComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,

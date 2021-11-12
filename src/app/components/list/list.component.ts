@@ -12,6 +12,8 @@ export class ListComponent{
   @Input() data: Card[];
   @Output() likeClick:EventEmitter<number>= new EventEmitter<number>()
   @Output() cardClick:EventEmitter<number>= new EventEmitter<number>()
+  @Output() addClick:EventEmitter<Card>= new EventEmitter<Card>()
+
 
   constructor(){
     this.data = [];
@@ -21,6 +23,9 @@ export class ListComponent{
   }
   onCardClick(id: number){
     this.cardClick.emit(id);
+  }
+  onAddClick(card: Card){
+    this.addClick.emit(card);
   }
 
 
