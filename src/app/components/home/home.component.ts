@@ -50,6 +50,7 @@ export class HomeComponent implements OnInit{
     let price = parseInt(product.subTitle);
     this.inCreaseQuantityOrAdd({id: product.id, name: product.title, price: price, quantity: 1})
     localStorage.setItem('cart',JSON.stringify(this.cart));
+    window.alert(product.title + " has been added to your cart")
   }
 
 }

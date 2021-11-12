@@ -1,22 +1,21 @@
 
-<table class="shopping-cart">
-  <caption>Shopping Cart</caption>
+<table mat-table class="mat-elevation-z8">
+  <caption><h2>Shopping Cart</h2></caption>
   <thead>
   <tr>
-    <td>Name</td>
-    <td>Price</td>
-    <td>quantity</td>
-    <td>Total</td>
+    <td class="tableHead"><h3>Name</h3></td>
+    <td class="tableHead"><h3>Price</h3></td>
+    <td class="tableHead"><h3>Quantity</h3></td>
+    <td class="tableHead"><h3>Total</h3></td>
   </tr>
   </thead>
   <tr *ngFor="let item of cart">
-  <td> {{item.name}} </td>
-  <td> {{item.price}} </td>
+  <td> {{item.name}} € </td>
+  <td> {{item.price}} €</td>
   <td> {{item.quantity}} </td>
-  <td> {{item.quantity * item.price}} </td>
+  <td> {{item.quantity * item.price}} € </td>
   </tr>
-  <tfoot><tr>
-    <td colspan="3">Total :</td>
-    <td>{{totalOrder}}</td>
-  </tr></tfoot>
+  <tr>
+    <td colspan="4" class="total"><h3>Total order : {{totalOrder}} €</h3></td>
+  </tr>
 </table>

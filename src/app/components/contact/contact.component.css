@@ -1,0 +1,17 @@
+form {
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+div {
+  padding: 10px;
+}
+
+label, input, textarea {
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+}

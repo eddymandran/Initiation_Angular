@@ -40,4 +40,7 @@ export class AboutUsComponent implements OnInit {
       return {id:person.id,title: person.name, subTitle: person.age + ' ans', image: "../../../assets/image/" + person.photo}
     })
   }
+  onLikeClick(id:number){
+    console.log("button like clicked with the id N° " + id)
+  }
 }
